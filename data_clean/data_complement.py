@@ -60,8 +60,8 @@ def timeclean(inputfile, outputfile):
     processed_data_frame.to_csv(outputfile, index=False)
 
 if __name__ == "__main__":
-    inputfile = "C:\\Users\\Shouko\\Desktop\\python\\dataset\\his_point.csv" 
-    outputfile = "C:\\Users\\Shouko\\Desktop\\python\\dataset\\4RPN410KM.csv"
+    inputfile = "C:\\Users\\73419\\Desktop\\dataset\\his_point.csv" 
+    outputfile = "C:\\Users\\73419\\Desktop\\dataset\\4RPN410KM.csv"
     timeclean(inputfile, outputfile)
 
 
