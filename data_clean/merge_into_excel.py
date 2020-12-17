@@ -4,7 +4,6 @@ __author__='Shangrui Yang'
 import pandas as pd
 import glob
 import sys
-import os
 
 
 all_files = glob.glob("C:\\Users\\73419\\Desktop\\dataset\\set1\\*.csv")
@@ -26,8 +25,9 @@ for file in all_files:
         lastfile = newfile
     else:
         writer.save()
-        writer.close()
         lastfile = newfile
         writer = pd.ExcelWriter("C:\\Users\\73419\\Desktop\\dataset\\set1merge\\"+newfile[1:4]+".xlsx")
         df = pd.read_csv(file)
         df.to_excel(writer, sheet_name=newfile, index=False)
+        
+

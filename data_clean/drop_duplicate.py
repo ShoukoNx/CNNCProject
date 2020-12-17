@@ -1,10 +1,13 @@
 __author__='Shangrui Yang'
 
+'''
+这个脚本用于删除csv中的重复行
+'''
+
 import pandas as pd
 import glob
 import sys
 
-input_path = ""
 
 all_files = glob.glob("C:\\Users\\73419\\Desktop\\dataset\\set2\\*.csv")
 i = 0
