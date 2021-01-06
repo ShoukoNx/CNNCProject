@@ -9,7 +9,7 @@ import glob
 import sys
 
 
-all_files = glob.glob("C:\\Users\\73419\\Desktop\\dataset\\set2\\*.csv")
+all_files = glob.glob(r"D:\PythonProjects\dataset\set1\*\*.csv")
 i = 0
 l = len(all_files)
 
@@ -19,5 +19,5 @@ for file in all_files:
     sys.stdout.write("\r当前进度: %s%% "%(percent))
     sys.stdout.flush()  
     data_frame = pd.read_csv(file)
-    data_frame.drop_duplicates(inplace=True)
+    data_frame.drop_duplicates(subset=['Times'], inplace=True)
     data_frame.to_csv(file, index=False)
